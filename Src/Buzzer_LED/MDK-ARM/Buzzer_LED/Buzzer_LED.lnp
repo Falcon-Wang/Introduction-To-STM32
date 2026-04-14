@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp
+"buzzer_led\startup_stm32f429xx.o"
+"buzzer_led\main.o"
+"buzzer_led\gpio.o"
+"buzzer_led\stm32f4xx_it.o"
+"buzzer_led\stm32f4xx_hal_msp.o"
+"buzzer_led\stm32f4xx_hal_rcc.o"
+"buzzer_led\stm32f4xx_hal_rcc_ex.o"
+"buzzer_led\stm32f4xx_hal_flash.o"
+"buzzer_led\stm32f4xx_hal_flash_ex.o"
+"buzzer_led\stm32f4xx_hal_flash_ramfunc.o"
+"buzzer_led\stm32f4xx_hal_gpio.o"
+"buzzer_led\stm32f4xx_hal_dma_ex.o"
+"buzzer_led\stm32f4xx_hal_dma.o"
+"buzzer_led\stm32f4xx_hal_pwr.o"
+"buzzer_led\stm32f4xx_hal_pwr_ex.o"
+"buzzer_led\stm32f4xx_hal_cortex.o"
+"buzzer_led\stm32f4xx_hal.o"
+"buzzer_led\stm32f4xx_hal_exti.o"
+"buzzer_led\system_stm32f4xx.o"
+--strict --scatter "Buzzer_LED\Buzzer_LED.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Buzzer_LED.map" -o Buzzer_LED\Buzzer_LED.axf
