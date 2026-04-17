@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp
+"light_sensor\startup_stm32f429xx.o"
+"light_sensor\main.o"
+"light_sensor\gpio.o"
+"light_sensor\stm32f4xx_it.o"
+"light_sensor\stm32f4xx_hal_msp.o"
+"light_sensor\stm32f4xx_hal_rcc.o"
+"light_sensor\stm32f4xx_hal_rcc_ex.o"
+"light_sensor\stm32f4xx_hal_flash.o"
+"light_sensor\stm32f4xx_hal_flash_ex.o"
+"light_sensor\stm32f4xx_hal_flash_ramfunc.o"
+"light_sensor\stm32f4xx_hal_gpio.o"
+"light_sensor\stm32f4xx_hal_dma_ex.o"
+"light_sensor\stm32f4xx_hal_dma.o"
+"light_sensor\stm32f4xx_hal_pwr.o"
+"light_sensor\stm32f4xx_hal_pwr_ex.o"
+"light_sensor\stm32f4xx_hal_cortex.o"
+"light_sensor\stm32f4xx_hal.o"
+"light_sensor\stm32f4xx_hal_exti.o"
+"light_sensor\system_stm32f4xx.o"
+--strict --scatter "Light_Sensor\Light_Sensor.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Light_Sensor.map" -o Light_Sensor\Light_Sensor.axf
