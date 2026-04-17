@@ -95,6 +95,7 @@ int main(void)
   while (1)
   {
 		// On KEY_1 pressed
+		// Note that do not use Toggle() inside the key-detection loop, cus the CPU runs pretty fast, and the state will toggle multiple times during one physical press.
 		if (HAL_GPIO_ReadPin(GPIOA, KEY_1_Pin) == GPIO_PIN_SET)
 		{
 			// Enable LED
@@ -108,10 +109,10 @@ int main(void)
 		if (HAL_GPIO_ReadPin(GPIOC, KEY_2_Pin) == GPIO_PIN_SET)
 		{
 			// Dim LED
-			HAL_GPIO_TogglePin(GPIOH, LED_R_Pin);
+			HAL_GPIO_WritePin(GPIOH, LED_R_Pin, GPIO_PIN_SET);
 			
 			// Disable BUZZER
-			HAL_GPIO_TogglePin(GPIOI, BUZZER_Pin);
+			HAL_GPIO_WritePin(GPIOI, BUZZER_Pin, GPIO_PIN_RESET);
 		}
 		
 		
