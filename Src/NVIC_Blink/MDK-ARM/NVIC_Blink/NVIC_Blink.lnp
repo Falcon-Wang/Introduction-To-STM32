@@ -1,0 +1,24 @@
+--cpu=Cortex-M4.fp.sp
+"nvic_blink\startup_stm32f429xx.o"
+"nvic_blink\main.o"
+"nvic_blink\gpio.o"
+"nvic_blink\stm32f4xx_it.o"
+"nvic_blink\stm32f4xx_hal_msp.o"
+"nvic_blink\stm32f4xx_hal_rcc.o"
+"nvic_blink\stm32f4xx_hal_rcc_ex.o"
+"nvic_blink\stm32f4xx_hal_flash.o"
+"nvic_blink\stm32f4xx_hal_flash_ex.o"
+"nvic_blink\stm32f4xx_hal_flash_ramfunc.o"
+"nvic_blink\stm32f4xx_hal_gpio.o"
+"nvic_blink\stm32f4xx_hal_dma_ex.o"
+"nvic_blink\stm32f4xx_hal_dma.o"
+"nvic_blink\stm32f4xx_hal_pwr.o"
+"nvic_blink\stm32f4xx_hal_pwr_ex.o"
+"nvic_blink\stm32f4xx_hal_cortex.o"
+"nvic_blink\stm32f4xx_hal.o"
+"nvic_blink\stm32f4xx_hal_exti.o"
+"nvic_blink\system_stm32f4xx.o"
+--strict --scatter "NVIC_Blink\NVIC_Blink.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "NVIC_Blink.map" -o NVIC_Blink\NVIC_Blink.axf
